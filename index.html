@@ -2,51 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#081827"><meta name="description" content="möbu — your personal movie library">
+<meta name="theme-color" content="#081827"><meta name="description" content="möbu — free movies, picked for you">
 <title>möbu</title><link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="top"><a class="brand" href="#" aria-label="möbu home">möbu<span>.</span></a><div class="top-actions"><button id="accountBtn" class="quiet">SIGN IN</button><button id="archiveBtn" class="quiet hidden">ARCHIVE <b id="archiveCount">0</b></button></div></header>
+<header class="top"><a class="brand" href="#" aria-label="möbu home">möbu<span>.</span></a><div class="top-actions"><button id="archiveBtn" class="quiet">ARCHIVE <b id="archiveCount">0</b></button></div></header>
 <main>
-<section id="auth" class="screen active">
-  <div class="eyebrow">YOUR MOVIE LIBRARY, EVERYWHERE</div>
-  <h1 id="authHeading">Welcome<br><em>back.</em></h1>
-  <p class="sub">Sign in to keep your movie library with you.</p>
-  <div class="auth-panel" id="loginPanel">
-    <form id="loginForm" class="auth-form">
-      <label for="loginUsername">USERNAME</label><input id="loginUsername" name="username" maxlength="24" autocomplete="username" required>
-      <label for="loginPassword">PASSWORD</label><input id="loginPassword" name="password" type="password" minlength="8" autocomplete="current-password" required>
-      <button class="auth-submit" type="submit">SIGN IN <span>↗</span></button>
-    </form>
-    <div class="auth-links"><button id="showSignup" type="button">CREATE ACCOUNT</button><button id="showRecovery" type="button">FORGOT PASSWORD?</button></div>
-  </div>
-  <div class="auth-panel hidden" id="signupPanel">
-    <form id="signupForm" class="auth-form">
-      <label for="signupUsername">USERNAME</label><input id="signupUsername" name="username" minlength="3" maxlength="24" pattern="[A-Za-z0-9_]{3,24}" autocomplete="username" required>
-      <p class="field-note">3–24 characters: letters, numbers, underscores.</p>
-      <label for="signupEmail">EMAIL FOR ACCOUNT RECOVERY</label><input id="signupEmail" name="email" type="email" autocomplete="email" required>
-      <label for="signupPassword">PASSWORD</label><input id="signupPassword" name="password" type="password" minlength="8" maxlength="128" autocomplete="new-password" required>
-      <button class="auth-submit" type="submit">CREATE ACCOUNT <span>↗</span></button>
-    </form>
-    <div class="auth-links"><button id="showLoginFromSignup" type="button">← BACK TO SIGN IN</button></div>
-  </div>
-  <div class="auth-panel hidden" id="recoveryPanel">
-    <form id="recoveryForm" class="auth-form">
-      <label for="recoveryEmail">ACCOUNT EMAIL</label><input id="recoveryEmail" name="email" type="email" autocomplete="email" required>
-      <button class="auth-submit" type="submit">SEND RESET LINK <span>↗</span></button>
-    </form>
-    <div class="auth-links"><button id="showLoginFromRecovery" type="button">← BACK TO SIGN IN</button></div>
-  </div>
-  <div class="auth-panel hidden" id="updatePasswordPanel">
-    <form id="updatePasswordForm" class="auth-form">
-      <label for="newPassword">NEW PASSWORD</label><input id="newPassword" name="password" type="password" minlength="8" maxlength="128" autocomplete="new-password" required>
-      <button class="auth-submit" type="submit">UPDATE PASSWORD <span>↗</span></button>
-    </form>
-  </div>
-  <p id="authMessage" class="auth-message" role="status" aria-live="polite"></p>
-  <p class="auth-footnote">A valid email is required for free password recovery. möbu does not use paid SMS services.</p>
-</section>
-<section id="home" class="screen">
+<section id="home" class="screen active">
   <div class="eyebrow">YOUR NEXT MOVIE NIGHT</div>
   <h1>Don't know<br>what to <em>watch?</em></h1>
   <p class="sub">Let möbu choose.</p>
@@ -80,8 +42,8 @@
   <button id="tagBackBtn" class="text-btn back">← BACK</button>
 </section>
 </main>
-<div id="playerModal" class="player-modal hidden" role="dialog" aria-modal="true" aria-label="Movie player"><div class="player-top"><span id="playerTitle">möbu player</span><button id="closePlayer" aria-label="Close player">CLOSE ×</button></div><iframe id="moviePlayer" title="Movie playback" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><p id="playerNote">Movie hosted by the Internet Archive. Playback depends on the source file and your connection.</p></div>
+<div id="playerModal" class="player-modal hidden" role="dialog" aria-modal="true" aria-label="Movie player"><div class="player-top"><span id="playerTitle">möbu player</span><div class="player-actions"><button id="skipMovie" type="button">SKIP MOVIE ↻</button><button id="closePlayer" aria-label="Close player">CLOSE ×</button></div></div><iframe id="moviePlayer" title="Movie playback" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><p id="playerNote">Movie hosted by the Internet Archive. Playback depends on the source file and your connection.</p></div>
 <footer>möbu <span>·</span> YOUR MOVIE LIBRARY</footer>
 <script src="app.js"></script>
-<script type="module" src="auth.js"></script>
+
 </body></html>
