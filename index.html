@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111114"><meta name="description" content="">
+<title>möbu</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><a class="brand" href="#" aria-label="möbu home">möbu<span>.</span></a><button id="archiveBtn" class="quiet">ARCHIVE <b id="archiveCount">0</b></button></header>
+<main>
+<section id="home" class="screen active">
+  <div class="eyebrow">YOUR NEXT MOVIE NIGHT</div>
+  <h1>Don't know<br>what to <em>watch?</em></h1>
+  <p class="sub">Let möbu choose.</p>
+  <div class="panel">
+    <div class="panel-head"><span>01 / PICK YOUR MOOD</span><button id="clearCats" class="text-btn">CLEAR</button></div>
+    <div id="categories" class="chips"></div>
+    <div class="panel-head tag-head"><span>02 / YOUR TAGS</span><button id="tagManagerBtn" class="text-btn">TAG ’EM UP +</button></div>
+    <div id="tagChoices" class="chips small"></div>
+    <button id="playBtn" class="play"><span>PLAY</span><span>↗</span></button>
+  </div>
+  <section id="result" class="result hidden">
+    <div class="eyebrow">MÖBU PICKED FOR YOU</div><h2 id="movieTitle"></h2>
+    <p id="movieMeta" class="sub"></p>
+    <a id="watchLink" class="watch" target="_blank" rel="noopener">FIND WHERE TO WATCH ↗</a>
+    <button id="againBtn" class="text-btn again">PICK ANOTHER ↻</button>
+  </section>
+</section>
+<section id="archive" class="screen">
+  <div class="eyebrow">YOUR COLLECTION</div><h1>Movie<br><em>archive.</em></h1>
+  <input id="search" class="search" placeholder="Search titles or tags…" autocomplete="off">
+  <div id="archiveTags" class="chips small"></div>
+  <div id="movieList" class="movie-list"></div>
+  <button id="backBtn" class="text-btn back">← BACK TO PLAY</button>
+</section>
+<section id="tagManager" class="screen">
+  <div class="eyebrow">MAKE IT YOURS</div><h1>Tag ’em<br><em>up.</em></h1>
+  <p class="sub">Create tags to organize your movie library.</p>
+  <form id="tagForm" class="tag-form"><input id="newTag" maxlength="24" placeholder="e.g. mind-bending" required><button class="add" type="submit">ADD +</button></form>
+  <div id="manageTags" class="tag-list"></div>
+  <button id="tagBackBtn" class="text-btn back">← BACK</button>
+</section>
+</main>
+<footer>möbu <span>·</span> NOTHING YET</footer>
+<script src="app.js"></script>
+</body></html>
