@@ -22,7 +22,8 @@
   <section id="result" class="result hidden">
     <div class="eyebrow">MÖBU PICKED FOR YOU</div><h2 id="movieTitle"></h2>
     <p id="movieMeta" class="sub"></p>
-    <a id="watchLink" class="watch" target="_blank" rel="noopener">FIND WHERE TO WATCH ↗</a>
+    <button id="watchBtn" class="watch">WATCH MOVIE ▶</button>
+    <button id="tagPickedBtn" class="text-btn again">TAG THIS MOVIE +</button>
     <button id="againBtn" class="text-btn again">PICK ANOTHER ↻</button>
   </section>
 </section>
@@ -41,6 +42,7 @@
   <button id="tagBackBtn" class="text-btn back">← BACK</button>
 </section>
 </main>
+<div id="playerModal" class="player-modal hidden" role="dialog" aria-modal="true" aria-label="Movie player"><div class="player-top"><span id="playerTitle">möbu player</span><button id="closePlayer" aria-label="Close player">CLOSE ×</button></div><video id="moviePlayer" controls playsinline preload="metadata"></video><p id="playerNote">Movie hosted by the Internet Archive. Playback depends on the source file and your connection.</p></div>
 <footer>möbu <span>·</span> NOTHING YET</footer>
 <script src="app.js"></script>
 </body></html>
